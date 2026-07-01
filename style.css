@@ -1,0 +1,191 @@
+/* GENERAL */
+html, body {
+	margin: 0;
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #f5f5f5;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: grey;
+}
+
+h3 {
+	font-size: 15px;
+	letter-spacing: 2px;
+	color: grey;
+	}
+
+/* buttons */
+#retake, #download, #next, #snap, #startB, #home {
+	padding: 10px 30px;
+	border-radius: 20px;
+	border: none;
+	background: #cfe8f5;
+	font-weight: bold;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+/* INDEX.HTML */
+.app{
+	flex-direction: row; /* align horizontally */
+	display: flex;
+	justify-content: center; /* center: x-position */
+	align-items: center;  /* center: y-position */
+	gap: 20px;
+}
+
+.previews{
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px
+}
+
+.camera{
+	position: relative;
+	/* relative --> makes this container the reference box */
+	/* meaning anything inside with absolute positioning is relative to this box */
+	width: 500px;
+	height: 375px;
+	background: #ddd;
+}
+
+video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/*transform: scaleX(-1);*/
+	display: block;
+}
+
+#countdown{
+	position: absolute;  /* puts number on top of video */
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	/* this whole part centers the number in the page */
+
+	visibility: hidden;
+	font-size: 80px;
+	color: white;
+	font-weight: bold;
+	pointer-events: none;  /* lets clicks pass through*/
+}
+
+.left{
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+#shot1, #shot2, #shot3 {
+	height: 100px;
+	width: auto;
+	object-fit: cover;
+	/*transform: scaleX(-1);*/
+}
+
+#canvas {
+	display: none;
+}
+
+
+
+/* CUSTOMISE.HTML */
+.right {
+	display: flex;
+	flex-direction: column;
+}
+
+.buttons, .aftBtns {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+#stripImage {
+	height: 550px;
+}
+
+#download {
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.choices {
+	display: flex;
+	gap: 20px;
+}
+
+.customise {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 50px;
+}
+
+/* COLOURS */
+#pinkB, #blueB, #greenB, #whiteB {
+	padding: 20px;
+	border-radius: 50%;
+	border: none;
+}
+
+#whiteB {background-color: white;}
+#pinkB {background-color: pink;}
+#blueB {background-color: #bbe5ff;}
+#greenB {background-color: #89d495;}
+
+/* THEMES */
+#duckB, #noneB {
+	border: none;}
+
+#duckB img, #noneB img {
+	width: 55px;
+	height: auto;
+	background-color: none;
+}
+
+
+/* HOME.HTML */
+.middle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 20px;
+}
+
+.photostrips {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	gap: 50px;
+}
+

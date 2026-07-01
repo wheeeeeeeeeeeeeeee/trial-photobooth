@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Photo Booth</title>
+	<link rel = 'stylesheet' href = 'style.css'>
+</head>
+
+
+<body>
+	<div class = 'app'> 
+		<div class = 'left'>
+			<h1>THE PHOTOBOOTH</h1>
+			<div class = 'camera'>
+				<video id="video" autoplay></video>
+				<div id = 'countdown'>3</div>
+			</div>
+
+			<canvas id='canvas'></canvas>
+
+			<div class = 'controls'>
+				<button id="snap">Start</button>
+
+				<div id = 'aftButtons' style = "display: none;">
+					<button id="retake">Retake</button>
+					<button id="next">Next</button>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div class = 'previews'>
+			<img id="shot1">
+			<img id="shot2">
+			<img id="shot3">
+		</div>
+	</div>
+
+	<img id = 'slidingDucks' src = 'stickers/sliding_ducks.png'>
+
+	<div id="strip"></div>
+
+	<script src = "script.js"></script>
+
+</body>
+
+</html>
